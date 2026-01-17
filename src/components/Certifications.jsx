@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { resumeData } from '../data/resume';
 import './Certifications.css';
 
@@ -61,7 +62,7 @@ const Certifications = () => {
                 </div>
             </div>
 
-            {selectedCert && (
+            {selectedCert && createPortal(
                 <div className="modal-overlay" onClick={closeModal}>
                     <div className="modal-content" onClick={(e) => e.stopPropagation()}>
                         <button className="close-modal-btn" onClick={closeModal}>&times;</button>
@@ -71,7 +72,8 @@ const Certifications = () => {
                             className="modal-image"
                         />
                     </div>
-                </div>
+                </div>,
+                document.body
             )}
         </section>
     );

@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import useActiveSection from '../hooks/useActiveSection';
 import './Navbar.css';
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
+    const activeSection = useActiveSection([
+        'hero', 'about', 'skills', 'experience', 'projects', 'certifications', 'contact'
+    ]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -13,12 +17,12 @@ const Navbar = () => {
     }, []);
 
     const navLinks = [
-        { name: 'About', href: '#about' },
-        { name: 'Skills', href: '#skills' },
-        { name: 'Experience', href: '#experience' },
-        { name: 'Projects', href: '#projects' },
-        { name: 'Certifications', href: '#certifications' },
-        { name: 'Contact', href: '#contact' },
+        { name: 'About', href: '#about', id: 'about' },
+        { name: 'Skills', href: '#skills', id: 'skills' },
+        { name: 'Experience', href: '#experience', id: 'experience' },
+        { name: 'Projects', href: '#projects', id: 'projects' },
+        { name: 'Certifications', href: '#certifications', id: 'certifications' },
+        { name: 'Contact', href: '#contact', id: 'contact' },
     ];
 
     return (
@@ -31,7 +35,10 @@ const Navbar = () => {
                 <ul className="nav-links desktop-links">
                     {navLinks.map((link) => (
                         <li key={link.name}>
-                            <a href={link.href} className="nav-link">
+                            <a
+                                href={link.href}
+                                className={`nav-link ${activeSection === link.id ? 'active' : ''}`}
+                            >
                                 {link.name}
                             </a>
                         </li>
