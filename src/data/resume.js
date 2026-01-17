@@ -3,13 +3,13 @@ export const resumeData = {
     name: "Sidam Avinash",
     role: "React Developer (Web/Android)",
     phone: "+91 9398499354",
-    email: "sidamavinash1234@gmail.com", // Keeping as per resume, though usually personal email is preferred
-    github: "https://github.com/Avinash-Shub", // Inferring username or placeholder
+    email: "sidamavinash1234@gmail.com",
+    github: "https://github.com/Avinash-Shub",
     summary: "Results-driven Associate Developer with 1.5 years of experience in building web and mobile applications using ReactJS, React Native, Node.js, and MongoDB. Skilled in creating responsive UIs, state management, and integrating native modules. Experienced in 3D animations with Three.js.",
   },
   experience: [
     {
-      role: "Associate",
+      role: "Associate Developer",
       company: "Capgemini India Private Ltd.",
       period: "May 2024 - Present",
       projects: [
