@@ -1,0 +1,68 @@
+.experience-section {
+    padding: 6rem 0;
+    background-color: var(--bg-secondary);
+}
+
+.experience-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.job-item {
+    margin-bottom: 4rem;
+    position: relative;
+    padding-left: 2rem;
+    border-left: 2px solid var(--accent-secondary);
+}
+
+.job-role {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.job-company {
+    font-size: 1.25rem;
+    color: var(--text-accent);
+    margin-bottom: 0.5rem;
+}
+
+.job-period {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.job-project {
+    background-color: var(--bg-primary);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.project-tech {
+    font-size: 0.9rem;
+    color: var(--accent-secondary);
+    margin-bottom: 1rem;
+}
+
+.project-point {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    position: relative;
+    padding-left: 1.25rem;
+}
+
+.bullet-point {
+    position: absolute;
+    left: 0;
+    color: var(--accent-primary);
+}
