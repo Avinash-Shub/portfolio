@@ -44,5 +44,12 @@ Open [http://localhost:5173](http://localhost:5173) to view it in your browser.
 3.  Replace images in `public/certs/` for certifications.
 4.  Push your changes to GitHub!
 
+## 🌐 Deployment
+To deploy this site online (so it runs 24/7):
+1.  Push your code to GitHub.
+2.  Go to [Vercel](https://vercel.com) and import your repo.
+3.  Vercel will build and host your site.
+    *   **Note:** Once deployed, your site lives on Vercel's servers. You can close your computer, browser, and terminal—your site will stay online!
+
 ## 📄 License
 This project is open for personal use and modification.

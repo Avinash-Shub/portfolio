@@ -5,6 +5,8 @@
     justify-content: center;
     position: relative;
     padding-top: 60px;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 .hero-background {
@@ -19,8 +21,16 @@
 }
 
 .hero-content {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
     z-index: 2;
+    text-align: left;
+}
+
+.hero-text {
+    flex: 1;
 }
 
 .hero-greeting {
@@ -28,6 +38,7 @@
     color: var(--accent-primary);
     margin-bottom: 1rem;
     font-weight: 600;
+    color: #000000;
 }
 
 .hero-title {
@@ -35,18 +46,48 @@
     font-weight: 800;
     margin-bottom: 1rem;
     line-height: 1.1;
+    white-space: nowrap;
+    color: #000000;
 }
 
 .hero-subtitle {
     font-size: 1.5rem;
-    color: var(--text-secondary);
+    color: #4b5563;
     margin-bottom: 2rem;
 }
 
 .hero-buttons {
     display: flex;
     gap: 1rem;
-    justify-content: center;
+    justify-content: flex-start;
+}
+
+/* Large yellow circle behind image area - moved to left */
+.shape-1 {
+    width: 500px;
+    height: 500px;
+    background-color: #FFE600;
+    left: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+/* ... other shapes ... */
+
+.hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    /* Image on left */
+    align-items: center;
+}
+
+.hero-image {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    /* border-radius removed to blend with background */
 }
 
 .btn-outline {
@@ -56,17 +97,49 @@
     font-weight: 600;
     cursor: pointer;
     transition: all var(--transition-speed);
-    border: 1px solid var(--text-secondary);
-    color: var(--text-primary);
+    border: 1px solid #000000;
+    color: #000000;
     background: transparent;
 }
 
 .btn-outline:hover {
-    border-color: var(--text-primary);
-    background: rgba(255, 255, 255, 0.05);
+    border-color: #000000;
+    background: #000000;
+    color: #ffffff;
 }
 
+/* Shapes styles removed */
+
 @media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column-reverse;
+        /* Put text below image or keep image top? Let's stick to standard Image Top often or Text Top?
+        Actually, usually better to have text first on mobile or Image first.
+        User asked for "left side should be that hi i'm".
+        On mobile column stack, usually image might go top or bottom.
+        Let's try standard column which puts text on top (since it's first in HTML) and image below.
+        Wait, flex-direction: column will put text on top.
+        */
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        padding-top: 20px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image-container {
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .hero-image {
+        max-width: 250px;
+        /* Don't be too huge on mobile */
+    }
+
     .hero-title {
         font-size: 2.5rem;
     }

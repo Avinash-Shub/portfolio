@@ -16,6 +16,11 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.navbar.scrolled .navbar-logo,
+.navbar.scrolled .nav-link {
+    color: #ffffff;
+}
+
 .navbar-container {
     display: flex;
     justify-content: space-between;
@@ -25,7 +30,7 @@
 .navbar-logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--text-primary);
+    color: #000000;
     text-decoration: none;
 }
 
@@ -39,7 +44,7 @@
 }
 
 .nav-link {
-    color: var(--text-secondary);
+    color: #000000;
     font-weight: 500;
     font-size: 0.95rem;
     position: relative;
@@ -48,7 +53,8 @@
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--text-primary);
+    color: var(--accent-primary);
+    /* Slight change to accent for active state on white */
 }
 
 .nav-link.active::after {
